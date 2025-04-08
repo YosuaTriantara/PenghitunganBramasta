@@ -18,7 +18,7 @@ export default function TeamPointsChart() {
         
         const formattedData: { [key: string]: TeamData } = {};
         
-        result.values.slice(1).forEach(([timestamp, team, level, additionalPoints, totalPoints]: string[]) => {
+        result.values.slice(1).forEach(([ , team, level, , totalPoints]: string[]) => {
           if (!formattedData[team]) {
             formattedData[team] = { name: team, level: Number(level), points: 0 };
           }
